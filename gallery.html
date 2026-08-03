@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WUWAHENTAI Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <span class="logo-heart" aria-hidden="true">WW</span>
+          <span>WUWAHENTAI</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="booru-page">
+      <section class="booru-head">
+        <div>
+          <p class="eyebrow">Rule34-style character gallery</p>
+          <h1 id="galleryTitle">Gallery</h1>
+          <p id="galleryTag" class="booru-tag"></p>
+        </div>
+        <a class="outline-button" href="index.html">BACK</a>
+      </section>
+
+      <section class="booru-toolbar">
+        <div class="modal-tabs" id="galleryTabs" role="tablist" aria-label="Gallery sort">
+          <button class="modal-tab active" type="button" data-tab="latest">Latest</button>
+          <button class="modal-tab" type="button" data-tab="top">Top</button>
+        </div>
+        <div class="modal-controls" id="galleryControls">
+          <button class="pager-button" type="button" data-page="prev">Prev</button>
+          <span id="galleryPageLabel">Page 1</span>
+          <button class="pager-button" type="button" data-page="next">Next</button>
+        </div>
+      </section>
+
+      <section class="booru-status" id="galleryStatus">Loading...</section>
+      <section class="booru-grid" id="galleryGrid" aria-label="Character images"></section>
+    </main>
+
+    <div class="floating-pager" id="floatingPager">
+      <button class="pager-button" type="button" data-page="prev">Prev</button>
+      <span id="floatingPageLabel">Page 1</span>
+      <button class="pager-button" type="button" data-page="next">Next</button>
+    </div>
+
+    <div class="image-viewer" id="imageViewer" aria-hidden="true">
+      <div class="viewer-backdrop" data-close-viewer></div>
+      <button class="viewer-close" type="button" aria-label="Close image" data-close-viewer>x</button>
+      <button class="viewer-arrow viewer-prev" type="button" aria-label="Previous image" data-viewer-step="-1">&lt;</button>
+      <div class="viewer-media" id="viewerMedia">Loading...</div>
+      <button class="viewer-arrow viewer-next" type="button" aria-label="Next image" data-viewer-step="1">&gt;</button>
+    </div>
+
+    <script src="gallery.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+[Unit]
+Description=WUWAHENTAI local Python server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/wuwahentai
+ExecStart=/usr/bin/python3 /var/www/wuwahentai/server.py
+Restart=always
+RestartSec=3
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
